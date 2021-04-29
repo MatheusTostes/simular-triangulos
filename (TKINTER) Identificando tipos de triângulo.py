@@ -11,16 +11,23 @@ janela = Tk()                                                                   
 janela.title("TIPO DE TRIÂNGULO")                                               # Renomeia o titulo janela.
 
 def bt_click():                                                                 # Define uma função para o botão.
-    print("btclick")                                                            # Teste para exibir no console se o botão foi acionado.
-
     v1 = V1.get()                                                               # Armazenamento dos valores de entrada.
     v2 = V2.get()
     v3 = V3.get()
 
-    a = int(v1)                                                                 # Conversão dos valores de entrada de string para inteiros.
+    values = [v1, v2, v3]
+    values.sort()
+
+    a = int(v1)                                                                # Conversão dos valores de entrada de string para inteiros.
     b = int(v2)
     c = int(v3)
 
+    normalizer = c / 3
+
+    c = 3
+    b = b / normalizer
+    a = a / normalizer
+    
 
     if (a <= 0 or b <= 0 or c <= 0):                                            # Primeira condição de exisência de um triângulo.
         print("Valores invalidos.")  
