@@ -30,37 +30,37 @@ def bt_click():                                                                 
     
 
     if (a <= 0 or b <= 0 or c <= 0):                                            # Primeira condição de exisência de um triângulo.
-        print("Valores invalidos.")  
+        #print("Valores invalidos.")  
         lb4["text"] = "Valores invalidos."                                      # Renomeia o label vazio para retornar quebra da condição.
 
     else: 
         if (a + b <= c or a + c <= b or b + c <= a):                            # Segunda condição de exisência de um triângulo.
-            print("Valores nao podem formar um triangulo.")
+            #print("Valores nao podem formar um triangulo.")
             lb5["text"] = "Valores nao podem formar um triangulo."              # Renomeia o label vazio para retornar quebra da condição.
 
         else:                                                                   
             if (a == b and a == c):                                             # Condição de triângulo equilátero.
-                 print("Triangulo equilatero.")                                 # Teste para exibir no console se a condição passou ou reprovou.
+                 #print("Triangulo equilatero.")                                 # Teste para exibir no console se a condição passou ou reprovou.
                  lb4["text"] = "Triangulo equilatero."                          # Renomeia o label 4 para avisar caso a condição passe.
                                                                                 # Abaixo o processo se repete com condições distintas para cada tipo de triângulo.
             if (a == b and b !=c or a == c and a != b or c==b and c != a):
-                 print("Triangulo isosceles.")
+                 #print("Triangulo isosceles.")
                  lb5["text"] = "Triangulo isosceles."
 
             if (a != b and b != c and a != c):
-                 print("Triangulo escaleno.")
+                 #print("Triangulo escaleno.")
                  lb6["text"] = "Triangulo escaleno."
 
             if ((b ** 2  == (a ** 2 + c ** 2)) or (a ** 2  == (b ** 2 + c ** 2)) or (c ** 2  == (a ** 2 + b ** 2))):
-                print("Triangulo retangulo.")
+                #print("Triangulo retangulo.")
                 lb7["text"] = "Triangulo retangulo."
 
             if (((b ** 2 < (a ** 2 + c ** 2))and a<=b and c<=a) or ((a ** 2 < (c ** 2 + b ** 2))and c <= a and b <= c) or ((c ** 2 < (b ** 2 + a ** 2))and b <= c and a <= b)):
-                print("Triangulo acutangulo.")
+                #print("Triangulo acutangulo.")
                 lb8["text"] = "Triangulo acutangulo."
 
             if (b ** 2 > (a ** 2 + c ** 2)) or (a ** 2 > (b ** 2 + c ** 2)) or (c ** 2 > (b ** 2 + a ** 2)):
-                print("Triangulo obtusangulo.")
+                #print("Triangulo obtusangulo.")
                 lb9["text"] = "Triangulo obtusangulo."
 
     lbs = [lb4, lb5, lb6, lb7, lb8, lb9]                                         # Todo label que não for renomeado sob as condições acima será enviado para o final da janela,
